@@ -121,7 +121,7 @@ jobs:
             cd .. && \
             yum install -y prename && \
             cd dist && \
-            rename 's/linux/manylinux/' * && \
+            rename -n 's/linux/manylinux/' * && \
             cd .. && \
             deactivate'
     - name: Publish to PyPi
