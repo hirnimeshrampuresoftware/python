@@ -122,6 +122,7 @@ jobs:
             cd .. && \
             yum install -y prename && \
             cd dist && \
+            rename --help && \
             rename -v 's/linux/manylinux/' * && \
             cd .. && \
             deactivate'
