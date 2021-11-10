@@ -113,18 +113,16 @@ jobs:
             rm -rf build && \
             python tests/print_platform_info.py && \
             python -m pip install dist/*.whl && \
-            cd tests && \
+            #cd tests && \
             python -m pip install scipy quadprog && \
-            #python DQ_test.py && \
-            python DQ_Kinematics_test.py && \
-            python cpp_issues.py && \
-            python python_issues.py && \
-            cd .. && \
-            yum install -y prename && \
-            cd dist && \
-            auditwheel repair ./* -w . && \
-            #rename -v 's/linux/manylinux/' * && \
-            cd .. && \
+            #python tests/DQ_test.py && \
+            python tests/DQ_Kinematics_test.py && \
+            python tests/cpp_issues.py && \
+            python tests/python_issues.py && \
+            #cd .. && \
+            #cd dist && \
+            auditwheel repair ./dist/* -w ./dist && \
+            #cd .. && \
             deactivate'
     - name: Publish to PyPi
       env:
