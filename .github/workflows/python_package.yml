@@ -54,7 +54,7 @@ jobs:
       run: |
         python tests/print_platform_info.py
         python -m pip install dist/*.whl
-        cd tests
+        cd python-tests
         python -m pip install scipy quadprog
         python DQ_test.py
         python DQ_Kinematics_test.py
@@ -113,7 +113,7 @@ jobs:
             rm -rf build && \
             python tests/print_platform_info.py && \
             python -m pip install dist/*.whl && \
-            cd tests && \
+            cd python-tests && \
             python -m pip install scipy quadprog && \
             python DQ_test.py && \
             python DQ_Kinematics_test.py && \
