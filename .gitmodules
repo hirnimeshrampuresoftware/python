@@ -13,3 +13,6 @@
 [submodule "tests"]
 	path = tests
 	url = https://github.com/dqrobotics/python-tests.git
+[submodule "python-tests"]
+	path = python-tests
+	url = https://github.com/hirnimeshrampuresoftware/python-tests.git
